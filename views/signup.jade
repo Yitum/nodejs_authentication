@@ -1,0 +1,61 @@
+extends layout
+
+//adjust the position of validation feedback icons
+//- style(type="text/css").
+//-     #signupForm .has-feedback .form-control-feedback {
+//-         top: 0;
+//-         right: 15px;
+//-     }
+//-     #signupForm .has-feedback .input-group .form-control-feedback {
+//-         top: -50;
+//-         right: 30px;
+//-     }
+
+
+block content
+
+    // Container
+    .container
+        .col-sm-4.col-sm-offset-4
+
+            h1 <span class="fa fa-sign-in"></span> Signup
+
+            if message.length > 0
+                .alert.alert-danger #{message}
+
+            form(id="signupForm" action="/signup" method="post")
+                .form-group
+                    label First Name
+                    input(type="text" class="form-control" name="firstname")
+                .form-group
+                    label Last Name
+                    input(type="text" class="form-control" name="lastname")
+                .form-group
+                    label Email
+                    input(type="text" class="form-control" name="email")
+                .form-group
+                    label Password
+                    input(type="password" class="form-control" name="password")
+                //- .form-group
+                //-     label(class="col-lg-3 contorl-label") Gender
+                //-     .col-lg-9
+                //-         select(class="form-contorl" name="gender")
+                //-             option(value="") Choose gender
+                //-             option(value="male") Male
+                //-             option(value="female") Female
+                //- .form-group
+                //-     label Date of birth
+                //-     div(class="input-group data" if="dobPicker" data-date-format="YYYY/DD/MM")
+                //-         input(type="text" class="form-control" name="dob")
+                //-         <span class="input-group-addon">
+                //-             <span class="glyphicon-calendar glyphicon"></span>
+                //-         </span>
+
+                button#btnSubmitSignup(type="submit" class="btn btn-primary btn-lg") Signup
+            hr
+
+            p Already have an account? 
+                a(href="/login") Login
+            p Or go 
+                a(href="/") home.
+    // /Container

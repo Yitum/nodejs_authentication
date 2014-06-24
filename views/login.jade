@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    // Container
+    .container
+        .col-sm-4.col-sm-offset-4
+            h1 <span class="fa fa-sign-in"></span> Login
+            if message.length > 0
+                .alert.alert-danger #{message}
+
+            form(action="/login" method="post")
+                .form-group
+                    label Email
+                    input(type="text" class="form-control" name="email")
+                .form-group
+                    label Password
+                    input(type="password" class="form-control" name="password")
+                button(type="submit" class="btn btn-warning btn-lg") Login
+            hr
+            p Need an account? 
+                a(href="/signup") Signup
+            p Or go 
+                a(href="/") home
+    // /Container

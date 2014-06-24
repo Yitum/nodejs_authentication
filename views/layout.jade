@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrapValidator.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap-datetimepicker.min.css')
+    //link(rel="stylesheet", href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css")
+    link(rel="stylesheet", href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css")
+    //adjust the position of validation feedback icons
+    //- style(type="text/css").
+    //-     #signupForm .has-feedback .form-control-feedback {
+    //-         top: 10;
+    //-         right: 0px;
+    //-     }
+    //-     #signupForm .has-feedback .input-group .form-control-feedback {
+    //-         top: 10;
+    //-         right: 40px;
+    //-     }
+  body
+    block content
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+    script(src='/javascripts/global.js')
+    script(src='/javascripts/bootstrapValidator.js')

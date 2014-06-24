@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+    head
+        title Node Authentication
+        link(rel="stylesheet", href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css")
+        link(rel="stylesheet", href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css")
+        style
+            body { padding-top: 80px; word-wrap: break-word; }
+    body
+    // Container
+    .container
+        .page-header.text-center
+            h1 <span class="fa fa-anchor"></span> Profile Page
+            a(href="/logout" class="btn btn-default btn-sm") Logout
+
+        .row
+            .col-sm-6
+                .well
+                    h3 <span class="fa fa-user"></span> Local
+                    p
+                        <strong>id</strong>: #{user._id} <br>
+                        <strong>Firstname</strong>: #{user.local.name.firstname} <br>
+                        <strong>Lastname</strong>: #{user.local.name.lastname} <br>
+                        <strong>email</strong>: #{user.local.email} <br>
+                        <strong>password</strong>: #{user.local.password}
